@@ -6,7 +6,8 @@ export const StateContext = createContext()
 
 export const StateProvider = ({ children}) =>{
     const initialState = {
-        Basket:[]
+        Basket:[],
+        user:null
     }
     const [state, dispatch] = useReducer(Reducer, initialState)
     const addToBasket =(item)=>{
